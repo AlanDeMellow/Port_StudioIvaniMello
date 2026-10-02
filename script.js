@@ -1,0 +1,5 @@
+const box = document.querySelector('#lightbox'); let last;
+
+//pra abrir as imagens quando clicadas nela, não me pergunte o código, chatGPT que me ajudou nisso.
+document.querySelectorAll('.work').forEach(button => button.addEventListener('click', () => { last = button; box.querySelector('img').src = button.dataset.photo; box.querySelector('img').alt = button.dataset.title + ' — trabalho de Ivani Mello'; box.querySelector('p').textContent = button.dataset.title; box.showModal(); }));
+box.querySelector('.close').addEventListener('click', () => box.close()); box.addEventListener('click', e => { if (e.target === box) { const r = box.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) box.close(); } }); box.addEventListener('close', () => last?.focus());

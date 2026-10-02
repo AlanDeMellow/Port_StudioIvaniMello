@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --pink: #f7e7eb;
+    --rose: #865365;
+    --ink: #32292d;
+    --muted: #71666c;
+    --line: #e7dce0
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: #fff;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button {
+    font: inherit
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--rose);
+    outline-offset: 5px
+}
+
+header {
+    height: 104px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.brand img {
+    width: 62px;
+    height: 62px
+}
+
+.brand span {
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600
+}
+
+.brand small {
+    display: block;
+    font: 10px Arial;
+    letter-spacing: 2.5px;
+    margin-top: 3px
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    font-size: 14px
+}
+
+nav a:hover,
+.text-link:hover {
+    color: var(--rose)
+}
+
+.button {
+    display: inline-flex;
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: center;
+    background: var(--rose);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background .2s
+}
+
+.button:hover {
+    background: #684052
+}
+
+.small {
+    padding: 12px 20px
+}
+
+.hero {
+    max-width: 1440px;
+    min-height: 720px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--pink)
+}
+
+.hero-copy {
+    padding: 80px 9% 60px 10%
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    color: var(--rose)
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.08
+}
+
+h1 {
+    font-size: clamp(56px, 6.6vw, 96px);
+    margin: 25px 0
+}
+
+em {
+    font-weight: 400;
+    color: var(--rose)
+}
+
+.hero-copy>p {
+    max-width: 370px;
+    color: var(--muted);
+    font-size: 16px
+}
+
+.hero-actions {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px
+}
+
+.text-link {
+    font-size: 14px;
+    border-bottom: 1px solid #b496a2;
+    padding-bottom: 4px
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 30px;
+    display: block;
+    margin-top: 45px
+}
+
+.signature span {
+    font: 11px 'DM Sans', Arial, sans-serif;
+    color: var(--muted);
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 1px;
+    font-style: normal;
+    text-transform: uppercase
+}
+
+.hero-photo {
+    position: relative;
+    min-height: 720px;
+    overflow: hidden
+}
+
+.hero-photo>img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center 42%
+}
+
+.photo-note {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: #fffef5ee;
+    padding: 18px 24px;
+    font: italic 27px 'Cormorant Garamond', Georgia, serif
+}
+
+.photo-note small {
+    font: 10px 'DM Sans', Arial, sans-serif;
+    letter-spacing: 1.4px;
+    display: block;
+    margin-top: 9px
+}
+
+.section {
+    padding: 95px 5%;
+    max-width: 1440px;
+    margin: auto
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: end;
+    margin-bottom: 40px
+}
+
+h2 {
+    font-size: clamp(40px, 4vw, 60px);
+    margin-top: 18px
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 4px
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 20px
+}
+
+.work {
+    padding: 0;
+    text-align: left;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: var(--ink);
+    min-width: 0
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+    transition: filter .2s
+}
+
+.work:hover img {
+    filter: brightness(.94)
+}
+
+.work span {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 14px;
+    padding: 12px 0
+}
+
+.work b {
+    font-weight: 400;
+    color: var(--rose)
+}
+
+.instagram {
+    display: table;
+    margin: 35px auto 0
+}
+
+.services {
+    background: #fbf5f7
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 40px
+}
+
+.service {
+    padding: 28px 0;
+    border-top: 1px solid var(--line)
+}
+
+.service>span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--rose)
+}
+
+h3 {
+    font-size: 29px;
+    margin: 12px 0
+}
+
+.service p {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 310px
+}
+
+.service-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 14px
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    align-items: center
+}
+
+.about-photo {
+    height: 520px;
+    overflow: hidden;
+    border-radius: 3px
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%
+}
+
+.about-copy p {
+    color: var(--muted);
+    max-width: 435px
+}
+
+.about-copy .signature {
+    margin: 28px 0
+}
+
+.about-copy .text-link {
+    display: inline
+}
+
+.contact {
+    background: var(--pink);
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px
+}
+
+.contact p {
+    color: var(--muted)
+}
+
+.contact .button {
+    margin-top: 15px
+}
+
+.contact-details {
+    padding-top: 10px;
+    display: grid;
+    gap: 27px;
+    min-width: 0
+}
+
+.contact-details>div>span {
+    display: block;
+    font-size: 11px;
+    color: var(--rose);
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    margin-bottom: 8px
+}
+
+.contact-details a {
+    overflow-wrap: anywhere
+}
+
+.contact-details p {
+    margin: 0 0 10px
+}
+
+footer {
+    padding: 32px 5%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--muted)
+}
+
+footer>span:first-child {
+    letter-spacing: 1.4px
+}
+
+dialog {
+    border: 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: auto
+}
+
+dialog::backdrop {
+    background: #20151cda
+}
+
+dialog img {
+    display: block;
+    max-height: 77vh;
+    max-width: 85vw;
+    object-fit: contain;
+    margin: auto
+}
+
+dialog p {
+    text-align: center;
+    font-size: 14px;
+    margin: 14px 0 0
+}
+
+.close {
+    display: block;
+    margin: 0 0 10px auto;
+    background: none;
+    border: 0;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 6px 10px;
+    color: var(--ink)
+}
+
+@media(min-width:1500px) {
+
+    header,
+    .hero,
+    .section,
+    footer {
+        max-width: 1400px
+    }
+}
+
+@media(max-width:1000px) {
+    header {
+        gap: 15px
+    }
+
+    nav {
+        gap: 16px
+    }
+
+    .brand span {
+        font-size: 16px
+    }
+
+    .hero-copy {
+        padding: 65px 8%
+    }
+
+    .hero,
+    .hero-photo {
+        min-height: 620px
+    }
+
+    .hero-actions {
+        gap: 18px
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .section {
+        padding: 70px 5%
+    }
+
+    .about {
+        gap: 6%
+    }
+
+    .about-photo {
+        height: 470px
+    }
+}
+
+@media(max-width:700px) {
+    header {
+        height: auto;
+        padding: 14px 5%;
+        flex-wrap: wrap;
+        gap: 14px
+    }
+
+    .brand img {
+        width: 49px;
+        height: 49px
+    }
+
+    .brand span {
+        font-size: 16px;
+        letter-spacing: 2px
+    }
+
+    .brand small {
+        font-size: 9px
+    }
+
+    .small {
+        padding: 10px 12px;
+        font-size: 12px
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        font-size: 14px
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        min-height: 0
+    }
+
+    .hero-copy {
+        padding: 45px 7% 35px
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.4px
+    }
+
+    h1 {
+        font-size: 64px;
+        margin: 20px 0
+    }
+
+    .hero-copy>p {
+        max-width: 100%
+    }
+
+    .signature {
+        margin-top: 26px
+    }
+
+    .hero-photo {
+        min-height: 0;
+        height: 480px
+    }
+
+    .hero-photo>img {
+        object-position: center 42%
+    }
+
+    .photo-note {
+        left: 20px;
+        bottom: 20px;
+        font-size: 25px;
+        padding: 14px 20px
+    }
+
+    .section {
+        padding: 55px 6%
+    }
+
+    .section-heading {
+        display: block;
+        margin-bottom: 28px
+    }
+
+    .section-heading p {
+        margin-top: 18px
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px
+    }
+
+    .work span {
+        font-size: 12px;
+        padding: 9px 0;
+        line-height: 1.5
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 0
+    }
+
+    .service {
+        padding: 23px 0
+    }
+
+    .service p {
+        max-width: none
+    }
+
+    .service-footer {
+        display: block
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 30px
+    }
+
+    .about-photo {
+        height: 380px
+    }
+
+    .about-copy p {
+        max-width: none
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 35px
+    }
+
+    .contact-details {
+        border-top: 1px solid #ddc6ce;
+        padding-top: 30px
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 28px 6%
+    }
+
+    h2 {
+        font-size: 45px
+    }
+
+    .hero-actions .button {
+        padding: 15px 19px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    * {
+        transition: none !important
+    }
+}
