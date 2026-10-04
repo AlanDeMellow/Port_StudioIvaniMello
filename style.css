@@ -1532,3 +1532,81 @@ dialog::backdrop {
 .about-photo img {
     object-position: 50% 72%
 }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0
+}
+
+.instagram-button {
+    gap: 8px;
+    color: #fff;
+    background: linear-gradient(110deg, #833ab4, #c13584 55%, #bc4222);
+    box-shadow: 0 5px 15px #c135841a
+}
+
+.instagram-button:hover {
+    background: linear-gradient(110deg, #6c2e97, #aa286f 55%, #a53b1f)
+}
+
+.instagram-button svg {
+    flex-shrink: 0
+}
+
+@media(max-width:1000px) and (min-width:701px) {
+    .site-header {
+        gap: 12px
+    }
+
+    .site-header nav {
+        gap: 12px
+    }
+
+    .header-actions .small {
+        padding: 11px 13px
+    }
+}
+
+@media(max-width:700px) {
+    .header-actions {
+        margin-left: auto;
+        gap: 7px
+    }
+
+    .header-actions .small {
+        padding: 10px 12px;
+        font-size: 11px
+    }
+
+    .instagram-button {
+        width: 39px;
+        height: 39px;
+        padding: 10px !important
+    }
+
+    .instagram-button span {
+        display: none
+    }
+}
+
+@media(max-width:370px) {
+    .site-header {
+        gap: 7px
+    }
+
+    .header-actions {
+        gap: 5px
+    }
+
+    .header-actions .small {
+        font-size: 10px;
+        padding: 9px
+    }
+
+    .instagram-button {
+        width: 35px;
+        height: 35px
+    }
+}
